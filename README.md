@@ -62,8 +62,8 @@ SEED = 2025
 - SCHEDULER : CosineAnnealingLR
 
 --------------------------------------------------------------------------
-
-
+=> [Ep 24] TL 0.1088 | Acc 0.3917 Top2 0.7119 | MacroF1 0.3461 BalAcc 0.3464 | ValLoss 2.4290
+=> [TEST] Acc 0.3955 | Top2 0.7170 | MacroF1 0.3513 | BalancedAcc 0.3507
 
 <img width="944" height="967" alt="image" src="https://github.com/user-attachments/assets/11227722-d0a2-45af-8e48-7fb44b2ca649" />
 
