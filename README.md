@@ -73,3 +73,75 @@ SEED = 2025
 
 <img width="886" height="556" alt="image" src="https://github.com/user-attachments/assets/7d408b75-fa05-4ed8-978b-2a6b765c301d" />
 
+
+
+### * 1.과적합 우려 ep 50 -> 80 변경
+### * 2. LR 3e-4 -> 2e-4 변경 /  weight_decay 1e-4 -> 5e-4 
+
+
+##### [9/21] (3)
+
+--------------------------------------------------------------------------
+bin = 10 
+BATCH_SIZE = 32
+NUM_WORKERS = 4
+EPOCHS = 80
+LR = 2e-4
+WEIGHT_DECAY = 1e-4
+EARLY_STOP_PATIENCE =10
+SEED = 2025
+
+- LOSS FUNCTION : CrossEntropy()
+- OPTIMIZER : Adam
+- SCHEDULER : CosineAnnealingLR
+
+--------------------------------------------------------------------------
+=> early stopping x
+=> [Ep 80] TL 1.4430 | Acc 0.4413 Top2 0.6223 | MacroF1 0.3702 BalAcc 0.3637 | ValLoss 1.4430
+=> [TEST] Acc 0.4143 | Top2 0.7027 | MacroF1 0.3272 | BalancedAcc 0.3302 | Prec 0.3485 | Rec 0.3302 | AUC(ovr-macro) 0.6214
+<img width="1232" height="793" alt="plot_loss" src="https://github.com/user-attachments/assets/a139fe9d-57c1-4bc6-94b5-6d899910678c" />
+=> 과적합 징후 살짝 보임 (의심)
+<img width="1232" height="793" alt="plot_loss" src="https://github.com/user-attachments/assets/0b9b5d9b-1b9c-459d-ba1b-d73b237756f8" />
+
+
+### [수정사항]
+### * 1. 과적합 방지  : EARLY_STOP_PATIENCE = 10 -> 8 
+### * 2.**LABEL_SMOOTHING = 0.10 -> 0.05  **
+WEIGHT_DECAY = 5e-5 ->1e-4
+스케줄러 교체 코사인(CosineAnnealingLR) -> ReduceLROnPlateau
+# 기대값→bin 매핑 (한 줄로 효과)
+
+# TTA (테스트/검증만)
+
+# 경계 가중치 (훈련 루프에 몇 줄)
+
+# Ordinal 학습 (가장 강력, 구조 변경 수반)
+
+
+
+
+
+<img width="853" height="1111" alt="image" src="https://github.com/user-attachments/assets/b0084106-b4c1-4f2d-b715-2b45fc67e2e9" />
+
+
+
+##### [9/22] (4)
+
+--------------------------------------------------------------------------
+bin = 10 
+BATCH_SIZE = 32
+NUM_WORKERS = 4
+EPOCHS = 80
+LR = 2e-4
+WEIGHT_DECAY = 1e-4
+EARLY_STOP_PATIENCE = 8
+SEED = 2025
+
+- LOSS FUNCTION : CrossEntropy()
+- OPTIMIZER : AdamW
+- SCHEDULER :  ReduceLROnPlateau
+
+--------------------------------------------------------------------------
+=> 
+=> 
+=>
