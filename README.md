@@ -49,13 +49,21 @@ SEED = 2025
 
 --------------------------------------------------------------------------
 bin = 10 
+
 BATCH_SIZE = 32
+
 NUM_WORKERS = 4
+
 EPOCHS = 50
+
 LR = 3e-4
+
 WEIGHT_DECAY = 1e-4
+
 EARLY_STOP_PATIENCE = 7
+
 SEED = 2025
+
 
 - LOSS FUNCTION : CrossEntropy()
 - OPTIMIZER : Adam
@@ -96,11 +104,13 @@ SEED = 2025
 
 --------------------------------------------------------------------------
 => early stopping x
+
 => [Ep 80] TL 1.4430 | Acc 0.4413 Top2 0.6223 | MacroF1 0.3702 BalAcc 0.3637 | ValLoss 1.4430
+
 => [TEST] Acc 0.4143 | Top2 0.7027 | MacroF1 0.3272 | BalancedAcc 0.3302 | Prec 0.3485 | Rec 0.3302 | AUC(ovr-macro) 0.6214
+
 <img width="1232" height="793" alt="plot_loss" src="https://github.com/user-attachments/assets/a139fe9d-57c1-4bc6-94b5-6d899910678c" />
 => 과적합 징후 살짝 보임 (의심)
-<img width="1232" height="793" alt="plot_loss" src="https://github.com/user-attachments/assets/0b9b5d9b-1b9c-459d-ba1b-d73b237756f8" />
 
 
 ### [수정사항]---------------------
@@ -125,19 +135,28 @@ SEED = 2025
 
 --------------------------------------------------------------------------
 bin = 10 
+
 BATCH_SIZE = 32
+
 NUM_WORKERS = 4
+
 EPOCHS = 80
-LR = 2e-4
+
+##### LR = 2e-4
+
 WEIGHT_DECAY = 1e-4
-EARLY_STOP_PATIENCE = 8
+
+##### EARLY_STOP_PATIENCE = 8
+
 SEED = 2025
 
 - LOSS FUNCTION : CrossEntropy()
 - OPTIMIZER : AdamW
-- SCHEDULER :  ReduceLROnPlateau
+-  SCHEDULER : #####  ReduceLROnPlateau
 
 --------------------------------------------------------------------------
 => 
+
 => 
+
 =>
