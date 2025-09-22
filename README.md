@@ -71,7 +71,6 @@ SEED = 2025
 
 ---------
 
-<img width="886" height="556" alt="image" src="https://github.com/user-attachments/assets/7d408b75-fa05-4ed8-978b-2a6b765c301d" />
 
 
 
@@ -104,19 +103,16 @@ SEED = 2025
 <img width="1232" height="793" alt="plot_loss" src="https://github.com/user-attachments/assets/0b9b5d9b-1b9c-459d-ba1b-d73b237756f8" />
 
 
-### [수정사항]
+### [수정사항]---------------------
 ### * 1. 과적합 방지  : EARLY_STOP_PATIENCE = 10 -> 8 
 ### * 2.**LABEL_SMOOTHING = 0.10 -> 0.05  **
-WEIGHT_DECAY = 5e-5 ->1e-4
-스케줄러 교체 코사인(CosineAnnealingLR) -> ReduceLROnPlateau
-# 기대값→bin 매핑 (한 줄로 효과)
-
-# TTA (테스트/검증만)
-
-# 경계 가중치 (훈련 루프에 몇 줄)
-
-# Ordinal 학습 (가장 강력, 구조 변경 수반)
-
+### * 3. WEIGHT_DECAY = 5e-5 ->1e-4
+### * 4.스케줄러 교체 코사인(CosineAnnealingLR) -> ReduceLROnPlateau
+###  5. 기대값→bin 매핑 (한 줄로 효과)
+###  6. TTA (테스트/검증만)
+### 7. 경계 가중치 (훈련 루프에 몇 줄)
+###  8. Ordinal 학습 (가장 강력, 구조 변경 수반)
+#-------------------------------------------------
 
 
 
