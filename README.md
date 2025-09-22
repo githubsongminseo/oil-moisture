@@ -60,7 +60,7 @@ LR = 3e-4
 
 WEIGHT_DECAY = 1e-4
 
-EARLY_STOP_PATIENCE = 7
+EARLY_STOP_PATIENCE = 10
 
 SEED = 2025
 
@@ -90,12 +90,19 @@ SEED = 2025
 
 --------------------------------------------------------------------------
 bin = 10 
+
 BATCH_SIZE = 32
+
 NUM_WORKERS = 4
+
 EPOCHS = 80
+
 LR = 2e-4
+
 WEIGHT_DECAY = 1e-4
+
 EARLY_STOP_PATIENCE =10
+
 SEED = 2025
 
 - LOSS FUNCTION : CrossEntropy()
